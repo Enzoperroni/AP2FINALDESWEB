@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: white; /* Cor de fundo branca */
+    background-color: gray; /* Cor de fundo branca */
     margin: 0;
     display: flex;
     align-items: center;
@@ -61,3 +61,4 @@ body {
       grid-template-rows: auto;
   }
 }
+
