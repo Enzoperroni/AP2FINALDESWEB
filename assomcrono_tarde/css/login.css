@@ -27,7 +27,7 @@ body {
   }
 
   button {
-    background-color: #009540; /* Verde Botafogo */
+    background-color: black;
     color: #fff;
     padding: 10px;
     border: none;
@@ -36,7 +36,7 @@ body {
   }
 
   button:hover {
-    background-color: #007730; /* Verde Botafogo mais escuro ao passar o mouse */
+    background-color: black
   }
 
   /* Adiciona uma borda vermelha ao campo de senha quando a senha é incorreta */
@@ -50,3 +50,5 @@ body {
     text-align: center;
     margin-top: 20px;
   }
+
+ 

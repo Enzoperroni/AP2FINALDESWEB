@@ -8,6 +8,12 @@ header{
     width: auto;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 h1{
     color: white;
     margin: 0px;
@@ -53,4 +59,34 @@ button{
     position: relative;
     padding: 0.5em;
     margin-left: 75px
+}
+
+#all{
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+#feminino{
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+#masculino{
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
 }
