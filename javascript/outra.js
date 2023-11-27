@@ -27,15 +27,16 @@ document.addEventListener('DOMContentLoaded', function (){
                 } else {
                     const containerdetalhes = document.getElementById('atleta_jogador');
                     containerdetalhes.innerHTML = `
-                        <div>
+                        <div id="card_atleta">
                             <h2>${atleta.nome}</h2>
                             <img src="${atleta.imagem}" alt="Imagem de ${atleta.nome}">
                         </div>
                         <div id="detalhescont">
-                            <p>${atleta.descricao || 'Descrição não disponível.'}</p>
+                            <p>Descrição: ${atleta.descricao}</p>
                             <p>Nome Completo: ${atleta.nome_completo}</p>
                             <p>Nascimento: ${atleta.nascimento}</p>
                             <p>Altura: ${atleta.altura}</p>
+                            <p>Posição: ${atleta.posicao}</p>
                         </div>
                     `;
                 }

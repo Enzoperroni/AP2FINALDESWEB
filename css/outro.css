@@ -5,7 +5,8 @@ button{
     background-color: black;
     position: relative;
     padding: 0.5em;
-    margin-left: 75px
+    margin-left: 75px;
+    align-items: center;
 }
 
 #atletas_jogador{
@@ -21,4 +22,10 @@ button{
 
 #detalhescont{
     display: flex;
+    flex-wrap: wrap;
+}
+
+#card_atleta{
+    display: flex;
+    flex-wrap: wrap;
 }
