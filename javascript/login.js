@@ -34,20 +34,20 @@ checkForStoredPassword("outra.html");*/
 
  // Função para verificar a senha e redirecionar
  document.getElementById('botaologin').addEventListener('click', function() {
-  // Obtenha o valor inserido pelo usuário no campo de senha
-  var senhaInserida = document.getElementById('senha').value;
-  // Calcule o hash MD5 da senha inserida
-  var senhaInseridaHash = hex_md5(senhaInserida);
+  
+  var senhainput = document.getElementById('senha').value;
+  
+  var hashsenha = hex_md5(senhainput);
 
-  // Substitua 'HASH_MD5_CORRETO' pelo hash MD5 correto da senha
-  var senhaCorretaHash = '85ee0fe4f155a9af2657d85054ad63ca';
+  
+  var senhaCerta = '85ee0fe4f155a9af2657d85054ad63ca';
 
-  // Compare os hashes MD5
-  if (senhaInseridaHash === senhaCorretaHash) {
-      // Redirecione o usuário para a próxima página
+  
+  if (hashsenha === senhaCerta) {
+      
       window.location.href = 'elenco.html';
   } else {
-      // Senha incorreta - você pode exibir uma mensagem de erro se desejar
+     
       alert('Senha incorreta. Tente novamente.');
   }
   });
