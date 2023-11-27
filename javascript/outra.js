@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function (){
         try {
             const response = await fetch(`https://botafogo-atletas.mange.li/${atletaID}`);
             if (!response.ok) {
-                throw new Error(`Erro ao buscar detalhes do atleta na API. Status: ${response.status}`);
+                throw new Error(`Houve um erro ao buscar os dados da API. Status: ${response.status}`);
             }
             const dados = await response.json();
             return dados;
         } catch (error) {
-            console.error('Erro ao buscar detalhes do atleta na API:', error);
+            console.error('Não foi possivel buscar os detalhes da API:', error);
             return null;
         }
     }
@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', function (){
                             <h2>${atleta.nome}</h2>
                             <img src="${atleta.imagem}" alt="Imagem de ${atleta.nome}">
                         </div>
-                        <p>${atleta.descricao || 'Descrição não disponível.'}</p>
+                        <div>
+                            <p>${atleta.descricao || 'Descrição não disponível.'}</p>
+                            <p>Nome Completo: ${atleta.nome_completo}</p>
+                            <p>Nascimento: ${atleta.nascimento}</p>
+                            <p>Altura: ${atleta.altura}</p>
+                        </div>
                     `;
                 }
             })
