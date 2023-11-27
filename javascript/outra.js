@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function (){
     
     async function fetchatletas(atletaID) {
         try {
-            const response = await fetch(`https://botafogo-atletas.mange.li/${atletaID}`);
-            if (!response.ok) {
-                throw new Error(`Houve um erro ao buscar os dados da API. Status: ${response.status}`);
+            const retorno = await fetch(`https://botafogo-atletas.mange.li/${atletaID}`);
+            if (!retorno.ok) {
+                throw new Error(`Houve um erro ao buscar os dados da API. Status: ${retorno.status}`);
             }
-            const dados = await response.json();
+            const dados = await retorno.json();
             return dados;
         } catch (error) {
             console.error('Não foi possivel buscar os detalhes da API:', error);
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function (){
                             <h2>${atleta.nome}</h2>
                             <img src="${atleta.imagem}" alt="Imagem de ${atleta.nome}">
                         </div>
-                        <div>
+                        <div id="detalhescont">
                             <p>${atleta.descricao || 'Descrição não disponível.'}</p>
                             <p>Nome Completo: ${atleta.nome_completo}</p>
                             <p>Nascimento: ${atleta.nascimento}</p>

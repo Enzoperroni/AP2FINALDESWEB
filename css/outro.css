@@ -18,3 +18,7 @@ button{
         grid-template-rows: auto;
     }
 }
+
+#detalhescont{
+    display: flex;
+}
